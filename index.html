@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Table - POC</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+<link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+    <table id ="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Rate</th>
+                <th>Cost</th>
+                <th colspan="2"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="row">
+                <td><input type="text" class="name"/></td>
+                <td><input type="number" class="quantity"/></td>
+                <td><input type="number" class="rate"/></td>
+                <td><input type="number" class="individualCost" readonly="readonly"/></td>
+                <td><button class="add">+</button></td>
+                <td><button class="remove">-</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <br/>
+    <!-- Calculate Taxes et al. -->
+    <div class="finalCost">
+        <button id="generateBill">Pay</button>
+        <div class="taxes" style="display:none;">
+            <label name="Tax">Taxes</label> : <input type="number" class="tax"/>
+            <br/>
+            <label name="Amount">Amount Payable</label> : <input type="number" readonly="readonly" id="payAmount"/>
+        </div>
+    </div>
+</body>
+</html>
